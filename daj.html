@@ -1,0 +1,41 @@
+<!-- JW Player 7 Core Script -->
+<script src="https:////cdn.jsdelivr.net/jwplayer/7/jwplayer.js"></script>
+
+<!-- Player Container Element -->
+<div id="player_6"></div>
+
+<script>
+    jwplayer("player_6").setup({
+        // File Content Settings
+        image: "http://testing.grappler.tk/files/2013/01/trailer_1080p.jpg",
+        file: "https://dn720402.ca.archive.org/0/items/helluva-boss-spring-broken-s-1-episode-3_202104/HELLUVA%20BOSS%20-%20Spring%20Broken%20S1%20Episode%203.mp4",
+        width: "100%",
+        aspectratio: "16:9",
+
+        // Primary Rendering Engine & Display Behaviors
+        primary: "html5",           // Forces modern canvas/HTML5 rendering
+        autostart: false,           // Remains paused on page load
+        repeat: false,              // Keeps video from looping when finished
+        stretching: "uniform",      // Fits video perfectly without cropping
+        playbackRateControls: true, // Enables speed toggles (0.5x, 1x, 2x)
+        
+        // --- ADDED IMAGE OVERLAY FEATURE ---
+        logo: {
+            file: "https://www.gstatic.com/images/branding/productlogos/sites_2026/v2/web-48dp/logo_sites_2026_color_1x_web_48dp.png", // Replace with your overlay image link
+            link: "https://example.com",                        // Destination when user clicks the image
+            position: "top-right",                              // Options: top-right, top-left, bottom-right, bottom-left
+            margin: "20",                                       // Distance from edge in pixels
+            hide: false                                         // False keeps it visible even when control bar hides
+        },
+        
+        // Visual Branding Right-Click Context Menu
+        abouttext: "Visit My Site",
+        aboutlink: "https://example.com",
+        
+        // Social Widget Options (Cleaned up formatting)
+        sharing: {
+            link: "https://example.com/page-with-player",
+            code: "<iframe src='https://example.com' width='640' height='360' frameborder='0' allowfullscreen></iframe>"
+        }
+    });
+</script> 
